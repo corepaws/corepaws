@@ -6,6 +6,11 @@ Core Paws theme for animal shelters and rescues.
 - Wordpress 5.x
 - PHP 5.6+ (recommended PHP 7.2+)
 
+## Installation
+Press the green "Clone or Download" button for this repo and select "Download Zip". 
+Unzip the downloaded archive and place in your `wp-content/themes` directory. 
+Navigate to Appearance -> Themes within the WP Admin and activate it!
+
 ## Theme customization
 This theme offers limited customization. Certain aspects of the theme 
 can be customized by navigation to the "Options" menu item within the AP Admin.
