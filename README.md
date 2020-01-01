@@ -13,6 +13,7 @@ can be customized by navigation to the "Options" menu item within the AP Admin.
 You can upload a custom logo and adjust the themes primary colors.
 
 From the same screen you can add some globally used modules such as the Pet Gallery, Social Links, and more.
+![customization](https://github.com/corepaws/corepaws/blob/master/screenshots/theme_options.png?raw=true)
 
 ## Pets Custom Post Type
 This theme contains a Pets custom post type for adding you adoptable animals.
