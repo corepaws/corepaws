@@ -38,4 +38,4 @@ To use these fill out the Pet Gallery and Testimonials section within the global
 For best results fill out all fields within the "Options" tab of the WP Admin.
 
 Make sure you are using at least the "HomePage" template for the home page and have added a couple Pets and created 
-a page with the "Adoption Listing & Search" page template to showcase theme.
+a page with the "Adoption Listing & Search" page template to showcase them.
