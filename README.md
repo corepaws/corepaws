@@ -1,5 +1,6 @@
 # Core Paws
 Core Paws theme for animal shelters and rescues.
+![screenshot](https://github.com/corepaws/corepaws/blob/master/screenshot.png?raw=true)
 
 ## Requirements
 - Wordpress 5.x
