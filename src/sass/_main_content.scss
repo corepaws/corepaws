@@ -1,0 +1,703 @@
+body {
+  #hero {
+    .bg-frame {
+      @include desktop-up {
+        height: 510px;
+      }
+    }
+  }
+}
+
+body.home {
+  #hero {
+    .bg-frame {
+      @include desktop-up {
+        height: 510px;
+      }
+    }
+  }
+}
+
+main {
+	@include tablet {
+		padding-top: 92px;
+	}
+	@include mobile {
+		padding-top: 92px;
+	}
+	@include mobile-sm {
+		padding-top: 75px;
+	}
+	#hero{
+		width:100%;
+		position:relative;
+		z-index: 0;
+		min-height: 250px;
+		background-size: cover;
+	    background-position: center top;
+	    overflow: hidden;
+
+	    .bg-frame {
+	    @include desktop-up {
+            //position: absolute;
+            //top: 0;
+            //left: 0;
+            //right: 0;
+            //bottom: 0;
+            //z-index: -5;
+			//height: 510px;
+	    }
+
+	    	.caro, .cell {
+	    		position: relative;
+	    		height: 100%;
+	    		width: 100%;
+	    	}
+
+	    	.cell {
+				background-size: cover;
+	    		background-position: center top;
+	    	}
+
+	    	@include desktop-up {
+	    		img {
+	    			display: none;
+	    		}
+	    	}
+
+	    	.slick-list, .slick-track {
+	    		height: 100%;
+	    	}
+	    }
+
+		@include mobile {
+			margin-bottom: 40px;
+		}
+		+.row > .center-col:first-child {
+			border-top: none!important;
+		}
+		#hero-overlay{
+			background-color: $header_background !important;
+			color: $lightblue;
+			text-align: center;
+			> * {
+				padding: 10px;
+			}
+			a.button {
+				height: 100%;
+				padding: 15px 10px;
+			}
+			padding: 10px 0 30px;
+			.container {
+				//@include desktop-up {
+				//	display: flex;
+				//	flex-direction: row;
+				//	align-items: center;
+				//	justify-content: center;
+				//	padding: 0;
+				//	> div {
+				//		width: 50%;
+				//	}
+				//}
+			}
+			@include desktop-up {
+				padding: 0;
+				padding-top: 15px;
+				background-color:$blue;
+				// position:absolute;
+				display: block;
+				bottom: 0;
+				left:0;
+				right:0;
+			}
+			@include mobile {
+				padding-top: $padding-mobile*1.5;
+				padding-bottom: $padding-mobile*2;
+				padding-right: $padding-mobile;
+				padding-left: $padding-mobile;
+			}
+			h1 {
+				font-size: 3.0em;
+				color: $white;
+
+			    text-transform: lowercase;
+			    font-family: Gotham Rounded;
+			    font-weight: 500;
+				margin-bottom: 15px;
+				@include mobile {
+					font-size: 2em;
+				}
+			}
+			p {
+				line-height: 1.3em;
+			    font-size: 1em;
+			    /*margin-bottom: 1.5em;*/
+				margin: 16px auto 1.2rem;
+				max-width: 700px;
+
+				&.non-mobile {
+					display: block !important;
+					@include mobile-sm {
+						display: none !important;
+					}
+				}
+				@include mobile {
+					font-size: 1.25em;
+					line-height: 1.25em;
+				}
+			}
+		}
+		.paws-trail {
+		    display: block;
+		    position: absolute;
+		    z-index: 0;
+		    top: -92px;
+		    bottom: 0;
+		    right: 50%;
+		    margin-right: -300px;
+		    height: auto;
+		    width: 170px;
+		    background: url(img/overlay_paws_global.png) 50% 100% no-repeat;
+		    background-size: contain;
+		    border: 0px solid red;
+
+		    @include tablet {
+		    	display: none;
+		    }
+		    @include mobile {
+		    	display: none;
+		    }
+		    @include desktop-up {
+		    	margin-right: -524px;
+		    }
+		    @include large {
+		    	margin-right: -656px;
+		    }
+		}
+	}
+	#top-content {
+	    margin: 40px 0 32px;
+	    &.no-bottom {
+	    	margin-bottom: 0;
+	    }
+	    .page-title {
+	    	margin-bottom: 0;
+	    	+.section-heading {
+	    		margin-top: 1em;
+	    	}
+	    }
+	    p {
+	    	color: darken($blue,8%);
+	    	margin-bottom:20px;
+	    }
+	    @include mobile-sm {
+	    	padding: 0 $padding-mobile;
+
+	    }
+	}
+	.button:first-of-type {
+	    margin-left: 0;
+	}
+	.button {
+	    margin-left: 15px;
+	    @include mobile {
+	    	margin-left: 0;
+	    }
+	}
+	.mobile-padded.row.centered.mobile-only {
+		.button {
+		    margin: 20px auto 40px;
+		}
+	}
+	#testimonials {
+		.section-heading {
+			margin-top: 14px;
+
+		}
+		hr {
+			width: calc(100% - 60px);
+			@include mobile-sm {
+		    	width: 100%;
+		    }
+
+		}
+		>div>p {
+			color: #777;
+		}
+
+		p + hr {
+			margin-top: 24px;
+		}
+		#testimonial-slides {
+		    padding: 0 60px;
+		    @include mobile-sm {
+		    	padding: 0 0;
+		    }
+		}
+		.testimonial {
+		    width: 750px;
+		    max-width: 100%;
+		    margin: 30px auto;
+		    color: $darkblue;
+		    font-weight: 600;
+		    font-style: italic;
+		}
+		.name {
+			font-weight: 600;
+			margin: 0 auto 20px;
+		}
+		.slick-arrow {
+			position: absolute;
+			height: 26px;
+			width: 14px;
+			margin-top: -13px;
+			top: 50%;
+			cursor: pointer;
+			&:hover {
+				opacity: 0.6;
+			}
+			&.slick-next {
+				right: 0;
+				@include mobile-sm {
+					display: none !important;
+				}
+			}
+			&.slick-prev{
+				left: 0;
+				@include mobile-sm {
+					display: none !important;
+				}
+			}
+		}
+		#tesimonial-dots {
+		    width: 100%;
+		    margin: 10px 0 20px;
+		    display: inline-block;
+		    .slick-dots{
+				li {
+					$dwdth: 16px;
+					display: inline-block;
+				    width: $dwdth;
+				    height: $dwdth;
+				    color: $grey3;
+				    background-color: $grey3;
+				    border-radius: 100%;
+				    margin: 0 6px;
+				    cursor: pointer;
+				    &:hover {
+				    	background-color: $lightblue !important;
+				    	color: $lightblue !important;
+				    }
+				}
+				li.slick-active {
+					color: $blue;
+					background-color: $blue;
+
+				}
+			}
+		}
+		.button {
+		    margin: 20px auto;
+		    @include mobile {
+		    	margin: $padding-mobile auto;
+		    }
+		}
+	}
+	#photo-strip{
+		margin: 3px 0;
+		width: 100%;
+		display: inline-flex;
+		img {
+			width: calc(100% / 7);
+		    height: 100%;
+		    margin: 0 1px;
+		}
+		@include tablet {
+			display: none;
+		}
+		@include mobile {
+			display: none;
+		}
+	}
+
+	// about page
+	.info-block {
+	    width: 100%;
+	    @include mobile {
+	    	padding-bottom: 30px;
+	    }
+	    .center-col {
+	    	overflow: hidden;
+	    	padding: $padding 0;
+		    border-top: 1px solid $grey2!important;
+
+		    @include mobile {
+		    	border-bottom: none;
+		    	border-top: none!important;
+		    	padding: 0;
+		    }
+	    }
+
+	    +.info-block .center-col {
+
+	    }
+
+	    .email-link {
+		    margin: 15px 0 0;
+		    @include tablet {
+		    	margin: 5px 0 0;
+		    }
+		    @include mobile {
+		    	margin: 0 0 10px;
+		    }
+		}
+	    .left-col {
+		    width: 37.5%;
+		    float: left;
+		    padding-left: 0;
+		    padding-right: 0;
+		    img {
+		    	width: 100%;
+		    	height: auto;
+		    	@include mobile {
+		    		width: 50%;
+		    		margin-left: 25%;
+		    	}
+		    	@include mobile-sm {
+		    		width: 100%;
+		    		margin-left: 0;
+		    	}
+		    }
+	    	@include mobile {
+	    		padding: 0;
+	    		width: 100%;
+	    	}
+	    	@include mobile-sm {
+	    		width: 100%;
+	    	}
+		}
+		.right-col {
+		    width: 62.5%;
+		    float: left;
+		    padding-left: $padding;
+		    padding-right: 0;
+	    	@include mobile {
+	    		padding-left: 0;
+	    		width: 100%;
+	    		padding: $padding-mobile;
+	    	}
+	    	@include mobile-sm {
+	    		width: 100%;
+	    		padding: $padding-mobile;
+	    		.section-heading {
+	    			text-align: left;
+	    		}
+	    	}
+		}
+		.section-heading {
+			/*text-transform: none;*/
+			/*.name {*/
+				/*text-transform: uppercase;*/
+			/*}*/
+		}
+		&:last-of-type {
+			.center-col {
+				border-bottom: none;
+			}
+		}
+	}
+	.info-block:last-of-type .center-col{
+    	// border-bottom: none;
+    }
+
+    // adoptables page
+	.pets {
+		/*border: 1px solid red;*/
+		.cols {
+			/*width: 33.33333%;*/
+			/*float: left;*/
+			/*margin: 0;*/
+		    /*padding: $padding;*/
+		    /*@include tablet {*/
+		    $colcol: #f1f1f1;
+	    	width: 100%;
+	    	padding: $padding-mobile 0;
+	    	position: relative;
+
+	    	img {
+	    		width: 100%;
+	    	}
+	    	@include tablet {
+	    		/*width: calc(50% - 30px);*/
+	    		width: 50%;
+	    		/*margin: 0 10px;*/
+	    		&:nth-child(odd) {
+	    			padding-left: 0;
+	    			clear: left;
+	    			border-right: 1px solid $colcol;
+	    		}
+	    		&:nth-child(even) {
+	    			padding-right: 0;
+	    		}
+	    		&:nth-child(1), &:nth-child(2) {
+	    			padding-top:0;
+	    		}
+
+	    		+.cols+.cols {
+	    			border-top: 1px solid $colcol;
+	    		}
+	    		min-height: 520px;
+	    	}
+	    	@include tablet-up {
+	    		padding: 26px 30px 30px;
+	    		float: left;
+
+	    		.button {
+	    			position: absolute;
+	    			bottom: 30px;
+	    		}
+	    	}
+	    	@include desktop-up {
+	    		border-left: 1px solid $colcol;
+	    		min-height: 480px;
+	    	}
+	    	@include desktop {
+	    		/*margin: 0 10px;*/
+	    		&:nth-child(3n-2) {
+	    			padding-left: 0;
+	    			border-left: none;
+	    			width: calc(33.333333% - 15px);
+	    		}
+	    		&:nth-child(3n-1) {
+	    			width: calc(33.333333% + 15px);
+	    		}
+	    		&:nth-child(3n) {
+	    			padding-right: 0;
+	    			width: calc(33.333333% - 15px);
+	    		}
+	    		&:nth-child(3n+1) {
+	    			clear: left;
+	    		}
+	    		&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+	    			padding-top:0;
+	    		}
+	    		+.cols+.cols+.cols {
+	    			border-top: 1px solid $colcol;
+	    		}
+
+	    	}
+	    	@include large {
+	    		&:nth-child(4n-3) {
+	    			border-left: none;
+	    			padding-left: 0;
+	    			width: calc(25% - 15px);
+	    		}
+	    		&:nth-child(4n-2) {
+	    			width: calc(25% + 15px);
+
+	    		}
+	    		&:nth-child(4n-1) {
+	    			width: calc(25% + 15px);
+
+	    		}
+	    		&:nth-child(4n) {
+	    			padding-right: 0;
+	    			width: calc(25% - 15px);
+	    		}
+	    		&:nth-child(4n+1) {
+	    			clear: left;
+	    		}
+	    		&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+	    			padding-top:0;
+	    		}
+	    		+.cols+.cols+.cols+.cols {
+	    			border-top: 1px solid $colcol;
+	    		}
+	    	}
+		    /*}
+		    @include mobile {
+		    	width: 100%;
+		    	padding: $padding-mobile 0;
+		    }
+		    @include mobile-sm {
+		    	padding: $padding-mobile 0;
+		    }*/
+		}
+	}
+
+	// faq page
+	.faq {
+
+		.page-title {
+			/*margin-bottom: 30px;*/
+		}
+
+		&.armed {
+			.answer {
+			/*overflow: hidden;*/
+				/*max-height: 0.0001rem;*/
+			/*	transition: all 0.3s;*/
+			/*opacity: 0;*/
+			}
+
+			.question.active + .answer {
+			/*opacity: 1;*/
+				padding-top: 10px;
+				/*max-height: 2000px;*/
+			}
+		}
+		.question {
+			margin-bottom: 0;
+			text-transform: none;
+			cursor: pointer;
+		}
+		.group {
+			padding: 30px 0;
+			border-top: 1px solid #f0f0f0;
+		}
+	}
+
+    // partners page
+    .map-body {
+    	padding-bottom: 30px;
+		padding-top: 12px;
+
+    	@include mobile {
+    		padding-bottom: 50px;
+    	}
+    }
+    #partners-block {
+    	position:relative;
+    	height:600px;
+    	width:100%;
+    	margin-bottom: 16px;
+    }
+    #map, #location-list{
+    	height: 100%;
+    	width: 100%;
+    	position:absolute;
+    	top:0;
+    	right:0;
+    	bottom:0;
+    	left:0;
+    	z-index: 1;
+    	max-width: 100%;
+    	display: none;
+    	@include transition();
+    	&.show {
+    		display: inline-block
+    	}
+    }
+    #location-list {
+    	#DataTables_Table_0_filter {
+    		margin-bottom: $padding;
+    	}
+    	input {
+		    width: 300px;
+		    // border-bottom: 2px solid $blue;
+		    outline: none;
+		    border-top: none;
+		    border-right: none;
+		    border-left: none;
+		    font-size: 1em;
+	        padding: 0.5em;
+		    background: $grey4;
+		    overflow-x: auto;
+    	}
+	    max-width: 100%;
+	    overflow-x: auto;
+	    a {
+	    	color: $blue;
+	    }
+    	li {
+		    margin: 20px 0;
+		    .section-heading {
+		    	margin-bottom: 5px;
+		    }
+		    a {
+		    	color: $blue;
+		    }
+		}
+		.inline-title {
+			display: none;
+		}
+		tr.odd {
+			background-color: $grey4 !important;
+		}
+    }
+    .leaflet-popup-close-button {
+    	display: none;
+    }
+    .leaflet-popup-content-wrapper {
+	    border-radius: 0;
+	    padding: 15px;
+	    .leaflet-popup-content {
+    	    margin: 0;
+    	    font-family: 'Source Sans Pro' !important;
+    	    h1 {
+    	    	margin: 0 0 10px;
+    	    	color: $darkblue;
+			    font-size: 1.5em;
+    	    }
+    	    p {
+    	    	margin: 3px 0;
+    	    	color: $blue;
+    	    	.bold {
+    	    		color: $darkblue;
+    	    	}
+    	    }
+	    }
+	}
+    #map-icons {
+	    width: 52px;
+	    float: right;
+	    margin-bottom: 5px;
+	    img {
+	    	float: left;
+	    	width:22px;
+	    }
+	    #list-select {
+	    	margin-left: 6px;
+	    }
+	    #map-select {
+	    	background-image:url('img/map.png');
+	    	background-size: 100% auto;
+	    	background-position: center;
+	    	background-repeat: no-repeat;
+	    	width: 23px;
+	    	height: 30px;
+	    	float: left;
+	    	cursor: pointer;
+	    	@include transition();
+    	}
+	    #list-select {
+	    	background-image:url('img/list.png');
+	    	background-size: 100% auto;
+	    	background-position: center;
+	    	background-repeat: no-repeat;
+	    	width: 23px;
+	    	height: 30px;
+	    	float: left;
+	    	cursor: pointer;
+	    	@include transition();
+	    }
+	    #map-select.selected{
+			background-image:url('img/map_active.png');
+			@include transition;
+    	}
+	    #list-select.selected {
+	    	background-image:url('img/list_active.png');
+	    	@include transition();
+	    }
+	}
+}
+
+.no-bottom-margin {
+	margin-bottom: 0!important;
+}
+
+
+// OVERRIDES THAT JUST WOULDNT WORK FOR SOME STUPID REASON
+body > main > div:nth-child(3) > div {
+	border-top: none !important;
+}

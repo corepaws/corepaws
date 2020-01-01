@@ -1,0 +1,49 @@
+.single-post {
+
+  .main-content {
+
+    ul {
+      padding-left: 20px;
+      padding-bottom: 15px;
+    }
+
+    h2 {
+      font-weight: normal !important;
+    }
+
+    h3 {
+      font-size: 1.2em !important;
+      font-weight: bold !important;
+    }
+
+    .container {
+
+      .meta {
+        margin: 10px 0;
+        color: $grey3;
+      }
+
+      .featured-img {
+        float: left;
+        margin: 20px 15px 15px 0;
+        width: 40%;
+        height: 350px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.12);
+        border-radius: 3px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .content {
+        color: $grey2;
+        font-size: 1.2em;
+        line-height: 1.2em;
+        p {
+          line-height: 1.2em;
+        }
+      }
+    }
+
+  }
+}

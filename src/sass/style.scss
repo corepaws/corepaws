@@ -1,0 +1,33 @@
+/*
+THEME NAME: Core P2ws
+THEME URI: http://www.corepaws.com
+DESCRIPTION: Responsive Theme
+VERSION: 2.0
+AUTHOR: Dan Cruzat
+*/
+
+
+@import "fonts";
+
+@import "mixins_variables";
+
+@import "original_site_styles";
+
+@import "reset";
+
+@import "global_elements";
+
+@import "blogroll";
+
+@import "post";
+
+@import "pagination";
+
+@import "videos";
+
+// imports after variables/mixins/functions
+@import "gravity-forms/form";
+@import "main_content";
+@import "header";
+@import "footer";
+

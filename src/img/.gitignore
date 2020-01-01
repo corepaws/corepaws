@@ -1,0 +1,8 @@
+# Local Dev Server
+.DS_Store
+Thumbs.db
+
+
+# Grunt configuration
+/grunt/.sass-cache
+/grunt/node_modules

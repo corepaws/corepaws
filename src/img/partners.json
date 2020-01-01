@@ -1,0 +1,27 @@
+{
+	name:'test1',
+	address:'12 address st',
+	phone:'(503)124-6789',
+	website:'http://google.com',
+	hours:'mon-fri 8AM-8PM',
+	lat:45.523062,
+	long:-122.676482
+},
+{
+	name:'test2',
+	address:'34 address st',
+	phone:'(503)124-6789',
+	website:'http://example.com',
+	hours:'mon-fri 8AM-8PM',
+	lat:32.776664,
+	long:-96.796988
+},
+{
+	name:'test3',
+	address:'56 address st',
+	phone:'(503)124-6789',
+	website:'http://example.com',
+	hours:'mon-fri 8AM-8PM',
+	lat:39.776664,
+	long:-76.796988
+}

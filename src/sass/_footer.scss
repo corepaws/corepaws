@@ -1,0 +1,423 @@
+footer {
+	background-color: $grey1;
+	color: $white;
+	width: 100%;
+	// height: 260px;
+	height: auto;
+	display:inline-block;
+	margin-bottom: -5px;
+	#footer-right, #footer-center, #tablet-footer {
+		a:hover {
+			color: $blue;
+		}
+	}
+	.follow-us-text {
+		display: none;
+	}
+	#footer-logo {
+		img {
+			display: inline-block;
+		}
+	}
+	@include tablet {
+		height: auto;
+		text-align: center;
+		.non-mobile {
+			display: none;
+		}
+		.mobile-only {
+			display: inline-block;
+		}
+		padding: $padding-mobile 0 5px;
+		#footer-logo {
+			margin-left: -3px;
+			margin-right: auto;
+			float: left;
+		}
+		.social-bar {
+			margin-left: auto;
+			margin-right: auto;
+			float: left;
+		}
+	}
+	@include mobile {
+		height: auto;
+		text-align: center;
+		padding: $padding-mobile 0 5px;
+
+		.non-mobile {
+			display: none;
+		}
+		.mobile-only {
+			display: inline-block;
+		}
+		#footer-logo, 
+		.social-bar {
+			margin-left: auto;
+			margin-right: auto;
+			float: none;
+		}
+		#footer-logo {
+			display: block;
+			max-width: calc(100% - 36px);
+			height: auto;
+		}
+		.follow-us {
+			display: none;
+		}
+	}
+	@include mobile-sm {
+		.center-col {
+			min-width: 256px !important;
+		    width: 80% !important;
+		}
+	}
+	#footer-left,
+	#footer-right,
+	#footer-center {
+		height: 100%;
+		padding: 60px 15px 40px;
+		float: left;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#footer-left,
+	#footer-center {
+		a {
+			display: inline-block;
+			float: left;
+			clear: both;
+			margin: 0.75em 0;
+			font-size: 1em;
+			color: $grey3;
+			// @include mobile {
+			// 	text-align: center;
+			// }
+		}
+	}
+
+	.social-bar {
+		width: 225px;
+		/*max-width: 225px;*/
+		margin: 16px auto 20px 0;
+		float: left;
+		a {
+			/*margin-left: auto;*/
+			color: $grey1;
+			/*width: 36px;*/
+			/*height: 36px;*/
+
+			@include mobile {
+				width: 42px;
+				height: 42px;
+			}
+		}
+		img	 {
+			float: left;
+			margin: 0.75em 12px 0.75em 0;
+			width: 30px;
+		}
+		@include tablet {
+			float: left;
+		}
+		@include mobile {
+			/*width: 100%;*/
+			display: flex;
+			width: 260px;
+			float: none;
+			margin: 20px auto;
+		}
+		@include mobile-sm {
+			width: 220px;
+
+			a {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+
+	#footer-tweet {
+		text-align: left;
+		padding-left: 25px;
+		font-size: 0.8em;
+		img {
+			float: left;
+			width: 20px;
+			margin: 1px 5px -1px -25px;
+		}
+		#tweet-heading {
+			color: $blue;
+		}
+		@include tablet {
+			float: left;
+		}
+		@include mobile-sm {
+			display: none;
+		}
+	}
+
+	#footer-left{
+		@include tablet-up {
+			padding-left: 0;
+		}
+		&:after {
+			@include tablet-up {
+		        height: 100%;
+			    width: 2px;
+			    content: "";
+			    background-color: rgba(49, 49, 49, 0.3);
+			    position: absolute;
+			    right: 0;
+			    left: 100%;
+			    top: 0;
+			    box-shadow: -1px 0 2px 0px rgba(155, 155, 155, 0.25);
+			}
+		}
+		width: 35%;
+		position: relative;
+		//display: inline-block;
+
+		@include tablet {
+			// width: 100%;
+			padding: 0 0;
+		}
+		@include mobile {
+			padding-top: 20px;
+			width: 100%;
+		}
+		@include mobile-sm {
+			width: 100%;
+			padding: 0 0;
+		}
+	}
+
+	#footer-right {
+		width: 35%;
+		@include tablet {
+			width: 100%;
+			display: none;
+			padding: 0 0;
+		}
+		@include mobile {
+			width: 100%;
+			display: none;
+			padding: 0 0;
+		}
+	}
+
+	#footer-center {
+		&:after {
+			@include tablet-up {
+		        height: 100%;
+			    width: 2px;
+			    content: "";
+			    background-color: rgba(49, 49, 49, 0.3);
+			    position: absolute;
+			    right: 0;
+			    left: 100%;
+			    top: 0;
+			    box-shadow: -1px 0 2px 0px rgba(155, 155, 155, 0.25);
+			}
+		}
+		width:30%;
+		position: relative;
+		//display: inline-block;
+		p:first-of-type {
+			margin-top: 0;
+		}
+		@include tablet {
+			width: 100%;
+			display: none;
+			padding: 0 0;
+		}
+		@include mobile {
+			width: 100%;
+			display: none;
+			padding: 0 0;
+		}
+	}
+	#footer-right {
+		p {
+			width: 100%;
+			float: left;
+		}
+		p:first-of-type {
+			margin-top: 0;
+		}
+
+	}
+
+	.copyright {
+		font-size: 0.75em;
+	}
+
+	#tablet-footer {
+		display: none;
+	    width: 65%;
+	    /*float: left;*/
+	    text-align: left;
+	    padding: 0 15px 0 30px;
+	    a {
+		    float: left;
+		    clear: both;
+		    width: 100%;
+		    margin: 5px 0;
+		    font-size: 0.8em;
+		    color: $grey3;
+		    @include mobile-sm {
+		    	text-align: center;
+		    }
+		}
+		.copyright {
+			float: left;
+			font-size: 0.85em;
+			display: inline-block;
+			@include mobile {
+				float: none;
+			}
+		}
+		#mc-embedded-subscribe-form {
+		    margin-bottom: 15px;
+		}
+		@include tablet {
+			display: inline-block;
+		}
+		@include mobile {
+			display: inline-block;
+		}
+		@include mobile-sm {
+			width: 100%;
+		    float: left;
+		    text-align: center;
+		    padding: 0 15px;
+		}
+	}
+	#mc-embedded-subscribe-form{
+		margin-bottom: 15px;
+		input[type="submit"] {
+		    padding: 0;
+		    height: 30px;
+		    width: 94px;
+		    border-radius: 0 !important;
+		    /*margin-left: -3px;*/
+		    @include tablet {
+		    	/*margin-top: 1px;*/
+		    }
+		    @include mobile {
+		    	/*margin-bottom: 0;*/
+		    	margin-top: 0px;
+		    	/*margin-left: -3px;*/
+		    }
+		    @include mobile-sm {
+		    	width: 100%;
+		    	margin: 5px 0;
+		    }
+		}
+		input[type='email'] {
+		    border: none;
+		    outline: none;
+		    height: 30px;
+		    width: 199px;
+		    padding: 6px 10px;
+		    border-radius: 0 !important;
+		    float: left;
+		    @include mobile {
+		    	/*float: none;*/
+		    }
+		    @include mobile-sm {
+		    	width: 100%;
+		    	margin: 5px 0
+		    }
+		}
+	}
+}
+
+	// hacks for Twitter integration
+
+	.tweet-frame {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+
+		@include mobile {
+			flex-direction: column;
+			max-width: 340px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img {
+			width: auto;
+			height: auto;
+			align-self: top;
+			margin-right: 4px;
+
+			@include mobile {
+				margin: 15px auto;
+			}
+		}
+	}
+	.fts-powered-by-text-popup a.fts-powered-by-text,
+	.fts-twitter-image,
+	.fts-twitter-full-name {
+		display: none!important;
+	}
+
+	.fts-tweeter-wrap .tweeter-info {
+		border-bottom: none;
+		padding-top: 0;
+	}
+
+	.tweeter-info .fts-right {
+		padding: 0;
+	}
+
+	.fts-twitter-text {
+		padding-top: 10px;
+		@include mobile {
+			
+			text-align: left;
+		}
+		@include tablet {
+			
+			text-align: left;
+		}
+	}
+
+	.fts-twitter-div a,
+	.fts-twitter-at-name { &, &:hover {
+			transition: none;
+			color: $white!important;
+		}
+	}
+
+	div [class*='fts-twitter-reply-wrap'] {
+		margin-top: 0;
+
+		a {
+				color: #666!important;
+		}
+
+		@include desktop {
+			opacity: 0;
+			transition: opacity 0.4s;
+		}
+	}
+	@include desktop {
+	.tweet-frame:hover div [class*='fts-twitter-reply-wrap'] {
+		opacity: 1;
+	}
+	}
+
+	.fts-twitter-no-margin-left {
+		margin-left: 0;
+	}
+
+
+	.fts-twitter-div .fts-uppercase,
+	span.fts-twitter-text {
+    	font-size: 0.8em !important;
+    	line-height: 1.4;
+	}
