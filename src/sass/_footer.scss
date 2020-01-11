@@ -6,6 +6,16 @@ footer {
 	height: auto;
 	display:inline-block;
 	margin-bottom: -5px;
+	#footer-title {
+		font-size: 36px;
+		margin: 28px 10px;
+		color: $white !important;
+		font-weight: bold;
+		font-family: "Gotham Rounded", Arial, sans-serif;
+		@include mobile-sm {
+			margin: 20px 10px;
+		}
+	}
 	#footer-right, #footer-center, #tablet-footer {
 		a:hover {
 			color: $blue;

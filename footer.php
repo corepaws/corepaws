@@ -14,16 +14,16 @@ if (is_array($sblk) && in_array('pel', $sblk)) : pet_line(); endif;
     <div class="center-col">
         <div id="footer-left">
             <!-- Footer left logo -->
-            <a href="<?php echo URL; ?>" id="footer-logo">
-                <?php if($logo) : ?>
-                    <img alt="<?php echo get_bloginfo('title'); ?>" src="<?php echo $logo['sizes']['thumbnail']; ?>" />
-                <?php else : ?>
-                    <h1 id="footer-title">
-                        <?php echo get_bloginfo('title'); ?>
-                    </h1>
-                <?php endif; ?>
-            </a>
+            <?php if ($logo) : ?>
 
+                <a href="<?php echo URL; ?>" id="footer-logo">
+                    <img alt="<?php echo get_bloginfo('title'); ?>" src="<?php echo $logo['sizes']['thumbnail']; ?>"/>
+                </a>
+            <?php else : ?>
+                <h1 id="footer-title">
+                    <?php echo get_bloginfo('title'); ?>
+                </h1>
+            <?php endif; ?>
             <!-- Footer left content -->
         </div>
         <div id="footer-center">
