@@ -1,5 +1,9 @@
 <?php
 $sblk = get_field('show_blocks');
+global $logo;
+if (!isset($logo)) {
+    $logo = get_field('logo', 'option');
+}
 if (is_array($sblk) && in_array('tes', $sblk)) : testimonials_block(); endif;
 if (is_array($sblk) && in_array('buc', $sblk)) : two_buckets(); endif;
 if (is_array($sblk) && in_array('pel', $sblk)) : pet_line(); endif;
@@ -10,7 +14,15 @@ if (is_array($sblk) && in_array('pel', $sblk)) : pet_line(); endif;
     <div class="center-col">
         <div id="footer-left">
             <!-- Footer left logo -->
-            <a href="<?php echo URL; ?>" id="footer-logo"><img src="<?php echo THEME; ?>/img/CorePaws_Logo_Final.png"/></a>
+            <a href="<?php echo URL; ?>" id="footer-logo">
+                <?php if($logo) : ?>
+                    <img alt="<?php echo get_bloginfo('title'); ?>" src="<?php echo $logo['sizes']['thumbnail']; ?>" />
+                <?php else : ?>
+                    <h1 id="footer-title">
+                        <?php echo get_bloginfo('title'); ?>
+                    </h1>
+                <?php endif; ?>
+            </a>
 
             <!-- Footer left content -->
         </div>

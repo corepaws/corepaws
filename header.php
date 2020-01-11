@@ -1,6 +1,9 @@
 <?php
 $he = isset($post) ? get_field('use_hero', $post->ID) : null;
-$logo = get_field('logo', 'option');
+global $logo;
+if (!isset($logo)) {
+    $logo = get_field('logo', 'option');
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
